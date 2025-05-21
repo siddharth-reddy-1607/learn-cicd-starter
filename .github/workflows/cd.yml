@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-go@v5
 
       - name: Install goose
-        uses: go install github.com/pressly/goose/v3/cmd/goose@latest
+        run: go install github.com/pressly/goose/v3/cmd/goose@latest
 
       - name: Check goose version
-        uses: goose --version
+        run: goose --version
 
       - name: Build notely
         run: scripts/buildprod.sh
